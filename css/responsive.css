@@ -1,0 +1,140 @@
+.nav-logo,
+.drawer-open,
+.drawer-close,
+.drawer-overlay {
+    display: none;
+}
+.main-content {
+    width: calc(100% - 300px);
+}
+@media (max-width: 1199.99px) {
+    .courses-list {
+        --columns: 2;
+    }
+    .nav > li > a {
+        font-size: 1.3rem;
+        padding: 20px 10px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+    .action-btn {
+        font-size: 1.6rem;
+    }
+}
+/* tablet -> 0 */
+@media (max-width: 991.89px) {
+    .sidebar {
+        display: none;
+    }
+    .container {
+        width: 780px;
+    }
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 70%;
+        background-color: var(--black);
+
+        text-align: center;
+
+        translate: -101%;
+        transition: translate 0.5s ease;
+    }
+
+    .logo-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 165px;
+    }
+    .action-btn {
+        font-size: 2rem;
+    }
+    .drawer-open {
+        display: block;
+        align-self: flex-start;
+        font-size: 2.8rem;
+        padding: 20px;
+        margin-left: -20px;
+        margin-bottom: -20px;
+        color: var(--white);
+    }
+
+    /* chưa hiểu nhấp ra ngoài mà nó lại mất side bar lắm */
+    .drawer-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity ease,
+            visibility ease;
+    }
+
+    #drawer:checked ~ .nav-wrapper {
+        translate: 0;
+        width: 40%;
+    }
+
+    #drawer:checked ~ .drawer-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .drawer-close {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        padding: 20px 30px;
+        font-size: 3rem;
+    }
+    .nav > li > a {
+        width: 100%;
+        padding: 20px 40px;
+    }
+
+    .nav-logo {
+        display: inline-block;
+        padding: 40px 30px;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .header-content: -10%;
+}
+
+/* mobile -> 0 man hinh doc  */
+@media (max-width: 767.89px) {
+    .sidebar {
+        display: none;
+    }
+    .courses-list {
+        --columns: 1;
+        --spacing: 20px;
+    }
+
+    .header-wrapper {
+        min-height: 386px;
+    }
+    .footer-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .nav-wrapper {
+        width: 80%;
+        align-items: flex-start;
+    }
+    .nav > li > a {
+        text-align: left;
+    }
+}

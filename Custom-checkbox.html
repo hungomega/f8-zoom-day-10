@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>custom checkbox</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/Custom_checkbox.css" />
+    </head>
+    <body>
+        <table>
+            <!-- table heading -->
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Checkbox</th>
+                    <th>Radio</th>
+                    <th>Switch</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <!-- on -->
+                    <td class="label">on</td>
+                    <td class="center">
+                        <input
+                            id="checkbox1"
+                            class="checkbox-input"
+                            type="checkbox"
+                            hidden
+                        />
+                        <label for="checkbox1" class="checkbox-label"></label>
+                    </td>
+                    <td class="center">
+                        <input
+                            id="checkbox2"
+                            class="checkbox-input2"
+                            type="radio"
+                            hidden
+                        />
+                        <label for="checkbox2" class="checkbox-label2"></label>
+                    </td>
+                    <td class="center">
+                        <input
+                            id="switch1"
+                            class="switch-input"
+                            type="checkbox"
+                            hidden
+                        />
+                        <label for="switch1" class="switch-label"></label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- off -->
+                    <td class="label">off</td>
+                    <td class="center">
+                        <label class="checkbox-label"></label>
+                    </td>
+                    <td class="center">
+                        <label class="checkbox-label2"></label>
+                    </td>
+                    <td class="center">
+                        <label class="switch-label"></label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
